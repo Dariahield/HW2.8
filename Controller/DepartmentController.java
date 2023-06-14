@@ -16,10 +16,12 @@ import java.util.Map;
 @RequestMapping("/departments")
 public class DepartmentController {
     private final DepartmentService departmentService;
+
     @Autowired
     public DepartmentController(DepartmentServiceImpl departmentService) {
         this.departmentService = departmentService;
     }
+
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(DepartmentSearchException.class)
     public String handleException(DepartmentSearchException e) {
@@ -27,11 +29,12 @@ public class DepartmentController {
     }
 
     @GetMapping("/max-salary")
-    public Employee maxSalary(@RequestParam Integer departmentId){
+    public Employee maxSalary(@RequestParam Integer departmentId) {
         return departmentService.getEmployeeWithMaxSalary(departmentId);
     }
+
     @GetMapping("/min-salary")
-    public Employee minSalary(@RequestParam Integer departmentId){
+    public Employee minSalary(@RequestParam Integer departmentId) {
         return departmentService.getEmployeeWithMinSalary(departmentId);
     }
 

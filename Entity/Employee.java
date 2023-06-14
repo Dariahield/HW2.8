@@ -17,6 +17,7 @@ public class Employee {
         this.salary = salary;
         this.department = department;
     }
+
     public String getFirstName() {
         return firstName;
     }
@@ -24,9 +25,11 @@ public class Employee {
     public String getLastName() {
         return lastName;
     }
+
     public float getSalary() {
         return salary;
     }
+
     public Department getDepartment() {
         return department;
     }
@@ -39,8 +42,8 @@ public class Employee {
                 '}';
     }
 
-   @Override
-   public boolean equals(Object o) {
+    @Override
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
@@ -50,8 +53,6 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(firstName, lastName);
     }
-
-
 
 
 }

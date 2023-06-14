@@ -30,11 +30,13 @@ public class Department {
     public void setName(String name) {
         this.name = name;
     }
+
     public static final Map<Integer, Department> DEPARTMENT_BY_ID;
+
     static {
         DEPARTMENT_BY_ID = new HashMap<>();
         DEPARTMENT_BY_ID.put(1, new Department(1, "accounting"));
         DEPARTMENT_BY_ID.put(2, new Department(2, "it"));
-        DEPARTMENT_BY_ID.put(3,new Department(3, "support"));
+        DEPARTMENT_BY_ID.put(3, new Department(3, "support"));
     }
 }

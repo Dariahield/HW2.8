@@ -17,7 +17,7 @@ import java.util.List;
 public class EmployeeController {
     private final EmployeeService employeeService;
 
-   @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(EmployeeStorageIsFullException.class)
     public String handleException(EmployeeStorageIsFullException e) {
         return String.format("%s %s", HttpStatus.BAD_REQUEST.value(), e.getMessage());
@@ -34,9 +34,6 @@ public class EmployeeController {
     public String handleException(EmployeeNotFoundException e) {
         return String.format("%s EmployeeNotFoundException %s", HttpStatus.NOT_FOUND.value(), e.getMessage());
     }
-
-
-
 
 
     @Autowired
@@ -59,8 +56,8 @@ public class EmployeeController {
         return employeeService.remove(firstName, lastName);
     }
 
-   @GetMapping("/findAll")
-   public List<Employee> getEmployees() {
+    @GetMapping("/findAll")
+    public List<Employee> getEmployees() {
         return employeeService.getAll();
     }
 }
