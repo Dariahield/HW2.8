@@ -15,7 +15,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
-
     private final EmployeeService employeeService;
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
