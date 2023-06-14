@@ -14,6 +14,7 @@ import static Entity.Department.DEPARTMENT_BY_ID;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
+
     private final int MAX_EMPLOYEES_COUNT = 10;
     private static List<Employee> employees = new ArrayList<>();
 
