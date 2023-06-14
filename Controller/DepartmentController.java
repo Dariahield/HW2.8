@@ -15,6 +15,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/departments")
 public class DepartmentController {
+
     private final DepartmentService departmentService;
 
     @Autowired

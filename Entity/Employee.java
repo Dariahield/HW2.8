@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Employee {
 
+
     public final String firstName;
     public final String lastName;
     private final float salary;
